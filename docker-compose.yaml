@@ -1,0 +1,50 @@
+version: "3"
+services:
+  php:
+    image: path:php-7.4
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: path-php
+    volumes:
+      - .:/var/www
+    networks:
+      - symfony_dev
+
+  nginx:
+    image: path:nginx-1.15
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    container_name: path-nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - .:/var/www
+    networks:
+      - symfony_dev
+
+  mysql:
+    image: mysql:5.7
+    container_name: path-mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - ./docker/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: path_case
+      MYSQL_USER: symfony
+      MYSQL_PASSWORD: password
+    healthcheck:
+      test: mysql -uroot -ppassword -e "use mysql; describe servers;" || exit 1
+      interval: 1m
+      timeout: 10s
+      retries: 3
+    networks:
+      - symfony_dev
+
+networks:
+  symfony_dev:
+    driver: bridge
