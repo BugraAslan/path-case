@@ -1,0 +1,19 @@
+order_filter:
+  methods: GET
+  path: /orders/filter
+  controller: App\Controller\OrderController::getOrderByFilter
+
+order_list:
+  methods: GET
+  path: /orders/list
+  controller: App\Controller\OrderController::getOrderList
+
+order_update:
+  methods: PATCH
+  path: /orders
+  controller: App\Controller\OrderController::updateOrderAction
+
+order_create:
+  methods: POST
+  path: /orders
+  controller: App\Controller\OrderController::createOrderAction

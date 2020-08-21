@@ -1,0 +1,7 @@
+login:
+  resource: "resources/login.yaml"
+  prefix: /api/login
+
+order:
+  resource: "resources/order.yaml"
+  prefix: /api
