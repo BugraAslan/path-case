@@ -26,3 +26,8 @@ composer install
 Migrate Migrations
 ```
 php bin/console doctrine:migrations:migrate
+```
+Load Fixtures
+```
+php bin/console doctrine:fixtures:load
+```
