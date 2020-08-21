@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "d63807d4-09b7-4d15-82c7-22c28ae5f935",
+		"name": "Path",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "/orders/list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1OTgwMTg2NTIsImV4cCI6MTU5ODAyMjI1Miwicm9sZXMiOlsiVVNFUl9ST0xFUyJdLCJ1c2VybmFtZSI6Im5pa2UifQ.Zs9lL1PpzTjogzxiC1PICiMp2clDBj1pDIhobUeEBTmBi3CIMrTABpv1SBr_iDaYdlKlx1a7zaIKUB1GKvrFu9czSjOUxR7F9LVHnCHd35VgZnAHUTWltRoyI6W29CIpobO5qZSwBYiGZOFT0UvFpQd0vQFlGwJcKhyZai92lrAPYQDpBgzgZP34IovILZpRcUO6PSmxduCV1JAxcHwHr5Xo73dbSJpJvok-BV7jFNnSqY5QmR5TH7UknYml0mlLJCUMz8L-_Y56T94Yq1Xgvjgr4fy94BpzzGEou5-uvZp-IFAX-NEv2-k99HFgp2ACM28vM-75rgGy8qMvYNuT6Pi9QYLULnqeDX_9SvsfytQD6K4ldnlHIfbI4jj12dYFQOq9oSwcFbKRPD76iy9ZHp82JCKcEgkV6pZjE8cJfoUwNjaTcGDaepEOPP23ZWjeRkiTDQpE87KkVNcBj9mh-6CJQufM89PZxvs65Y8xZBUSpLZyiNRTl_DVK-nvtBEvcZwWNJObdH0jSFWaJ-YBUtoawKRBh6uDk9QQ2iEoW2GUAiD8Tu5pP0X-hA4P_xN1oLYRIEuBfQvF53rbbigUM3da0PoKSues37wps9S23y41Afgi9TpScYCiIzsglHenNwoR_gyRBfNqwy7C6Ig0VB6Qrx3KMIVpWtlZiTeO6xc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"page\": 1,\n    \"size\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/api/orders/list",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"orders",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1OTgwMTQ2MDEsImV4cCI6MTU5ODAxODIwMSwicm9sZXMiOlsiVVNFUl9ST0xFUyJdLCJ1c2VybmFtZSI6Im5pa2UifQ.G8cW8YNSiEnnmYl7UEbrKPGWmxwEzUjdfFjAysIQz50nOLXkdxCpyV7HCPR4jwvtofGAZ85HU9zEcWUw0dihwG1h7UQyEuDluNC_04C6YrVmRN6CGCjnzlgi1LM9jGLXQ7rrni5JupHqeSDlKzFcVrNDKYcO69oNQgoiHaWuiZzgrkWI3fjqQ5nxXJD251iajsiP4iS3nYqZkpwItddnA1CNuVqPAbO3LGI3qBK6mF_Fal-038QBl38KG3InTXwH9vFdISuQ3T8GDdiDFpAE4iCCMX0yLJ2r99YVYk21Lu39te8mveK0PCOMRRZT3RLni4ufUnQmWorrOP_c8VEVvlsZBusGhmDjC6gXbimx17CnDDtO3SJsVaXAHFgDDPwW_C22KGf7KUAVkFZqsVsV_VM9wQ7hdPhLXt9g2a57GkrzLWgZAvJCQrQE_-8RWEtPoeeKxo5-EpSj5VwsYmXgwG52WhjuqEVeualILOpBctf9o9mPdGAA6fxOjKi9MRSXaSeyeFLa6wWVVbaNZBoh19e7bziTGuRnd8PllLex8RVFJMkjnyA9qXWcC3TQzMlDbHSY3kV10EsA26l-sSlEs1_Cn97ceOmLLtJBmYblqI2GEiC5o1TS2iN4AuE5oigV03P6tbA_5qRUyMumUOwVQp2u73grGSMhp5KJjf3yqqs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order_code\": \"ORDERCODE5\",\n    \"product_id\": \"PRODUCT1\",\n    \"product_price\": 123.45,\n    \"product_name\": \"Bej Spor Ayakkabı\",\n    \"quantity\": 2,\n    \"address\": \"Atatürk caddesi\",\n    \"district\": \"Sancaktepe\",\n    \"city\": \"İstanbul\",\n    \"email\": \"morwoss@gmail.com\",\n    \"phone\": \"012312635\",\n    \"shipping_date\": \"2020-08-20 03:04:59\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/api/orders",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/orders/filter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"page\": 1,\n    \"size\": 5,\n    \"product_id\": \"PRODUCT1\",\n    \"order_code\": \"ORDERCODE1\",\n    \"start_date\": \"2020-07-01 00:00:00\",\n    \"end_date\": \"2020-07-01 23:59:59\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/api/orders/filter",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"orders",
+								"filter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/orders",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order_code\": \"ORDERCODE1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/api/orders",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "/login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"adidas\",\n    \"password\": \"adidas\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost/api/login/check",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"login",
+								"check"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
