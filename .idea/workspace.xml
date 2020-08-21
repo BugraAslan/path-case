@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93be2702-6940-413f-b23c-eb3e368f87bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docker/php/config/health.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20200821221358.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20200821165429.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/php/config/php.ini" beforeDir="false" afterPath="$PROJECT_DIR$/docker/php/config/php.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Validator/Constraints/ShippingDateValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Validator/Constraints/ShippingDateValidator.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +186,7 @@
       <workItem from="1597881505474" duration="2233000" />
       <workItem from="1597885154157" duration="619000" />
       <workItem from="1597914351141" duration="29480000" />
-      <workItem from="1597973656908" duration="36100000" />
+      <workItem from="1597973656908" duration="42889000" />
     </task>
     <task id="LOCAL-00001" summary="docker compose and data fixtures">
       <created>1598034534830</created>
@@ -200,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598034675174</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=".">
+      <created>1598040314723</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598040314723</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +221,8 @@
     <MESSAGE value="docker compose" />
     <MESSAGE value="docker compose and data fixtures" />
     <MESSAGE value="README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="98" key="#Plugins" timestamp="1598030569503">
@@ -223,10 +233,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1597881625306" />
-    <state x="431" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598036784399">
+    <state x="431" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598044294221">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="431" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1598036784399" />
+    <state x="431" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1598044294221" />
     <state x="505" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1598031613316">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -235,10 +245,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1598026139219" />
-    <state x="346" y="44" key="CommitChangelistDialog2" timestamp="1598034672607">
+    <state x="346" y="44" key="CommitChangelistDialog2" timestamp="1598040314583">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="346" y="44" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598034672607" />
+    <state x="346" y="44" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1598040314583" />
     <state x="548" y="369" key="ComposerInitDialogKey" timestamp="1597883628380">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -267,17 +277,17 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1597881510010" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1598034677085">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1598040315756">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1598034677085" />
-    <state x="421" y="205" width="710" height="518" key="find.popup" timestamp="1598036027435">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1598040315756" />
+    <state x="421" y="205" width="710" height="518" key="find.popup" timestamp="1598041998654">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="421" y="205" width="710" height="518" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1598036027435" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1598040115408">
+    <state x="421" y="205" width="710" height="518" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1598041998654" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1598047873482">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1598040115408" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1598047873482" />
   </component>
 </project>

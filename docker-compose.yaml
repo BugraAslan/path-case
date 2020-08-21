@@ -35,7 +35,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: symfony
       MYSQL_DATABASE: path_case
-      MYSQL_USER: root
+      MYSQL_USER: path
       MYSQL_PASSWORD: symfony
     healthcheck:
       test: mysql -uroot -ppassword -e "use mysql; describe servers;" || exit 1

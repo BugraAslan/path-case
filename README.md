@@ -31,3 +31,7 @@ Load Fixtures
 ```
 php bin/console doctrine:fixtures:load
 ```
+Change Mysql Host (.env)
+```
+DATABASE_URL=mysql://root:symfony@mysql:3306/path_case?serverVersion=5.7
+```

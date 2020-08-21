@@ -12,6 +12,8 @@ use App\Model\Response\ApiResponseModel;
 use App\Service\OrderProductService;
 use App\Service\OrderService;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Validator\ConstraintViolationListInterface;
@@ -134,8 +136,10 @@ class OrderController extends AbstractBaseController
     /**
      * @param OrderUpdateRequestModel $orderUpdateRequestModel
      * @param ConstraintViolationListInterface $validationErrors
-     * @ParamConverter("orderUpdateRequestModel", converter="fos_rest.request_body")
      * @return Response
+     * @throws ORMException
+     * @throws OptimisticLockException
+     * @ParamConverter("orderUpdateRequestModel", converter="fos_rest.request_body")
      */
     public function updateOrderAction(
         OrderUpdateRequestModel $orderUpdateRequestModel,
@@ -162,7 +166,7 @@ class OrderController extends AbstractBaseController
         if (!$updatedOrderEntity){
             return $this->customErrorResponse(
                 'Shipping Date is Expired',
-                Response::HTTP_CONFLICT
+                Response::HTTP_NOT_ACCEPTABLE
             );
         }
 

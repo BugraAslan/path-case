@@ -15,7 +15,7 @@ class ShippingDateValidator extends ConstraintValidator
      */
     public function validate($shippingDate, Constraint $constraint)
     {
-        if ($shippingDate->diff((new \DateTime()))->invert){
+        if (!$shippingDate->diff((new \DateTime()))->invert){
             $this->context->buildViolation($constraint->message)
                 ->setParameters([
                     '{{ shippingDate }}' => $shippingDate->format('Y-m-d H:i:s'),
